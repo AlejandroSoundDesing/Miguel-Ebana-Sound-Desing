@@ -2,7 +2,7 @@
 
 Portfolio de Miguel Ebana, técnico y diseñador de sonido para cine, publicidad y videojuegos.
 
-Web publicada: https://alejandrosounddesing.github.io/miguel-ebana-sound-desing/
+Web publicada: https://alejandrosounddesing.github.io/Miguel-Ebana-Sound-Desing/
 
 - `index.html`: toda la web (los trabajos están en `const WORKS = [`).
 - `privacidad.html`: política de privacidad del formulario de contacto.
