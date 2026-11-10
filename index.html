@@ -83,6 +83,8 @@ a { color: inherit; }
 .hero h1 span { display: block; color: var(--coral); }
 .hero .lede { max-width: 48ch; margin: 0; font-size: clamp(1rem, 1.5vw, 1.15rem); color: var(--muted); }
 .hero .lede strong { color: var(--ink); font-weight: 500; }
+.hero .lede a, .about p a { color: var(--hot); font-weight: 500; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.hero .lede a:hover, .about p a:hover { color: var(--ink); }
 
 /* Secciones */
 section { scroll-margin-top: 64px; }
@@ -224,7 +226,7 @@ dd { margin: 3px 0 0; }
   <div class="wrap">
     <div class="hero-text">
       <h1>Miguel<span>Ebana</span></h1>
-      <p class="lede">Sonido para <strong>cine, publicidad y videojuegos</strong>. Del micrófono en el set a la última pasada de mezcla: sonido directo, edición, foley y diseño sonoro.</p>
+      <p class="lede">Hago producción y postproducción de sonido para <strong>cine, publicidad y videojuegos</strong>. ¿Necesitas a alguien para darle un acabado profesional al audio de tu juego? ¿Estás planteando una campaña de publicidad y te gustaría una identidad sonora concreta? Sea como sea, <a href="#contacto">hablemos</a>.</p>
     </div>
     <figure class="sprite" id="sprite">
       <canvas id="sprite-px" role="img" aria-label="Miguel Ebana en set, con pértiga, auriculares y grabadora de campo, dibujado en píxeles"></canvas>
@@ -263,9 +265,8 @@ dd { margin: 3px 0 0; }
   <div class="wrap about">
     <div>
       <div class="sec-head"><h2>Sobre mí</h2></div>
-      <p>Soy técnico de sonido. He trabajado como operador de boom y en captación de sonido directo en largometrajes, cortometrajes y televisión, y en la postproducción de sonido de cortometrajes y largometrajes de animación.</p>
-      <p>Me interesa la parte del sonido que el público no nota pero siente: el ambiente que sitúa una escena, el foley que hace creíble a un personaje, el silencio justo antes de un corte. En este portfolio reúno trabajos de postproducción y ejercicios de re-sonorización sobre imagen existente.</p>
-      <p>Cuento con equipo propio para postproducción de sonido.</p>
+      <p>Me llamo Miguel y desde joven me he obsesionado con el sonido en el audiovisual. Me gradué en Sonido para audiovisuales y espectáculos en 2023, pero apenas fue descubrir la punta del iceberg. Desde entonces no he parado de aprender más sobre el amplio mundo del sonido y todo lo que le rodea, continuando mi formación y trabajando en proyectos que me permitan desarrollar mi visión.</p>
+      <p>El diseño de sonido es un aspecto que de verdad puede maximizar el potencial de un buen proyecto. Si la idea de conseguirlo te llama, <a href="#contacto">hablemos de sonido</a>.</p>
     </div>
     <div class="facts">
       <div>
@@ -341,6 +342,35 @@ dd { margin: 3px 0 0; }
 const WORKS = [
   // "file" = nombre del vídeo en "Videos Sound Reel Miguel Ebana" (solo referencia; la web usa "video").
   {
+    id: "conejito-jen",
+    thumb: "img/conejito-jen.jpg",
+    title: "El Conejito Jen",
+    cat: "Ficción sonora",
+    year: "2023",
+    duration: "00:00:44:07",
+    role: "Proyecto final de Sonido",
+    tasks: ["Preproducción", "Grabación", "Edición", "Mezcla final"],
+    summary: "Ficción sonora presentada como proyecto final de Sonido.",
+    text: ["Ficción sonora presentada como proyecto final de Sonido."],
+    file: "El Conejito Jen Cortado para Reel.mp4",
+    video: "https://vimeo.com/1241327604"
+  },
+  {
+    id: "akiko",
+    thumb: "img/akiko.jpg",
+    title: "Akiko, the flying monkey",
+    cat: "Largometraje",
+    year: "2024",
+    duration: "00:00:37:00",
+    role: "Diseño sonoro",
+    tasks: ["Diseño sonoro", "Foley", "Ambientes", "Edición SFX"],
+    summary: "Un mundo fantástico en el que los animales no solo hablan sino sueñan con la libertad.",
+    text: ["En Akiko se nos presenta un mundo fantástico en el que los animales no solo hablan sino sueñan con la libertad.",
+           "Para Akiko intentamos recrear el sonido de la imaginación infantil en un mundo en el que un coche de juguete modificado por una comadreja suena como te imaginabas que sonaba el potente coche de carreras con el que jugabas de pequeño."],
+    file: "Akiko para Sound Reel.mp4",
+    video: "https://vimeo.com/1241327326"
+  },
+  {
     id: "fauna",
     thumb: "img/fauna.jpg",
     title: "Fauna",
@@ -348,81 +378,52 @@ const WORKS = [
     year: "2024",
     duration: "00:01:00:23",
     role: "Postproducción de sonido",
-    tasks: ["Edición de diálogos", "Foley", "Ambientes", "Mezcla"],
-    summary: "Extracto de un cortometraje real, con la banda sonora de postproducción completa.",
-    text: ["Escena seleccionada del cortometraje. Limpieza y edición de diálogos, grabación y sincronía de foley, construcción de ambientes y mezcla final.",
-           "Sustituye este texto por una breve descripción del reto sonoro de la escena."],
+    tasks: ["Limpieza y edición de diálogos", "Grabación y sincronía de foley", "Construcción de ambientes", "Mezcla final"],
+    summary: "Postproducción de sonido para el cortometraje del director Daniel León Lacave.",
+    text: ["Postproducción de sonido para el cortometraje del director Daniel León Lacave."],
     file: "Fauna Cortado para Reel.mp4",
     video: "https://vimeo.com/1241327733"
-  },
-  {
-    id: "conejito-jen",
-    thumb: "img/conejito-jen.jpg",
-    title: "El Conejito Jen",
-    cat: "Cortometraje",
-    year: "2024",
-    duration: "00:00:44:07",
-    role: "Postproducción de sonido",
-    tasks: ["Diseño sonoro", "Foley", "Ambientes", "Mezcla"],
-    summary: "Extracto del cortometraje con el trabajo de sonido de postproducción.",
-    text: ["Sustituye este texto por una breve descripción de la escena y de lo que hiciste en ella."],
-    file: "El Conejito Jen Cortado para Reel.mp4",
-    video: "https://vimeo.com/1241327604"
-  },
-  {
-    id: "akiko",
-    thumb: "img/akiko.jpg",
-    title: "Akiko",
-    cat: "Re-sonorización",
-    year: "2025",
-    duration: "00:00:37:00",
-    role: "Diseño sonoro completo",
-    tasks: ["Diseño sonoro", "Foley", "Ambientes", "Mezcla"],
-    summary: "Escena con la banda sonora original eliminada y rehecha desde cero.",
-    text: ["Ejercicio de re-sonorización: se parte de la imagen sin sonido y se reconstruye toda la banda (efectos, foley, ambientes y mezcla). Los derechos de la imagen pertenecen a sus autores; el trabajo tiene fines demostrativos."],
-    file: "Akiko para Sound Reel.mp4",
-    video: "https://vimeo.com/1241327326"
   },
   {
     id: "septimo-ganso",
     thumb: "img/septimo-ganso.jpg",
     title: "El Séptimo Ganso",
-    cat: "Re-sonorización",
-    year: "2026",
+    cat: "Cortometraje",
+    year: "2025",
     duration: "00:00:37:12",
-    role: "Diseño sonoro completo",
-    tasks: ["Diseño sonoro", "Foley", "Mezcla"],
-    summary: "Escena re-sonorizada desde cero, con un enfoque distinto al de Akiko.",
-    text: ["Ejercicio de re-sonorización sobre imagen existente. Describe aquí qué buscabas con el sonido de la escena."],
+    role: "Grabación y postproducción de sonido",
+    tasks: ["Grabación", "Edición de diálogos", "SFX", "Ambientes", "Diseño sonoro", "Mezcla final"],
+    summary: "Grabación y postproducción de sonido para el corto express de Daniel León Lacave.",
+    text: ["Grabación y postproducción de sonido para el corto express de Daniel León Lacave."],
     file: "El Septimo Ganso para Reel.mp4",
     video: "https://vimeo.com/1241327684"
   },
   {
-    id: "desafio-2",
+    id: "trainspotting",
     thumb: "img/desafio-2.jpg",
-    title: "Desafío 2",
-    cat: "Re-sonorización",
-    year: "2026",
+    title: "Rediseño escena de Trainspotting",
+    cat: "Rediseño",
+    year: "2025",
     duration: "00:01:46:15",
-    role: "Diseño sonoro completo",
-    tasks: ["Diseño sonoro", "Foley", "Ambientes", "Mezcla"],
-    summary: "Escena de El club de la lucha con la banda sonora original eliminada y rehecha desde cero.",
-    text: ["Ejercicio de re-sonorización: se parte de la imagen sin sonido y se reconstruye toda la banda (efectos, foley, ambientes y mezcla). Los derechos de la imagen pertenecen a sus autores; el trabajo tiene fines demostrativos."],
+    role: "Rediseño sonoro",
+    tasks: ["Edición de diálogos", "SFX", "Ambientes", "Mezcla final"],
+    summary: "¿Cómo sería la escena de la paliza a Baby Face con la música de Marilyn Manson?",
+    text: ["¿Cómo sería la escena de la paliza a Baby Face si estuviera acompañada de la música de Marilyn Manson? En este rediseño le doy una vuelta de tuerca sonora a una escena de una película de culto como es Trainspotting."],
+    note: "La imagen pertenece a sus propietarios y se usa con fines demostrativos.",
     file: "Desafío 2 Miguel Ebana.mp4",
     video: "https://vimeo.com/1241327410"
   },
   {
     id: "samsung",
     thumb: "img/samsung.jpg",
-    title: "Anuncio Samsung · Reinterpretación musical",
-    cat: "Música",
+    title: "Rediseño anuncio de Samsung",
+    cat: "Rediseño",
     year: "2026",
     duration: "00:00:30:04",
-    role: "Música y mezcla (ejercicio personal)",
-    tasks: ["Nueva música", "Mezcla con diálogo y efectos"],
-    summary: "Nueva propuesta musical sobre un anuncio existente de Samsung.",
-    text: ["Ejercicio personal: se sustituye la música original del anuncio por una reinterpretación propia y se mezcla con el resto de la banda.",
-           "La composición no es mi especialidad habitual. Este trabajo muestra cómo pienso la música al servicio de la imagen y de la mezcla."],
+    role: "Música y mezcla",
+    tasks: ["Composición musical", "SFX", "Mezcla final"],
+    summary: "Una banda sonora nueva para conectar con el público joven y amplio de la marca.",
+    text: ["En este rediseño buscaba aventurarme con la composición musical en anuncios. Teniendo en cuenta el público específico del producto, hacemos una banda sonora que pueda llegar a conectar con el mismo público joven y amplio que busca atraer la marca."],
     note: "No es un encargo de Samsung. La imagen pertenece a sus propietarios y se usa con fines demostrativos.",
     file: "Samsung Anuncio Con Voz.mp4 (también hay versión Sin Voz)",
     video: "https://vimeo.com/1241327827"
