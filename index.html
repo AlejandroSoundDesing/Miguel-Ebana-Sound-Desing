@@ -578,8 +578,11 @@ function pixelate(cols) {
   }
   g.putImageData(d, 0, 0);
 }
-if (simg.complete && simg.naturalWidth) pixelate(64);
-else simg.addEventListener("load", () => pixelate(64), { once: true });
+/* Nivel de pixelado = columnas del sprite (más columnas, menos pixelado).
+   Antes era 64; ahora 96. Para comparar en vivo: ?px=64, ?px=96 o ?px=128 en la URL. */
+const SPRITE_COLS = (() => { const q = +new URLSearchParams(location.search).get("px"); return q >= 32 && q <= 200 ? q : 96; })();
+if (simg.complete && simg.naturalWidth) pixelate(SPRITE_COLS);
+else simg.addEventListener("load", () => pixelate(SPRITE_COLS), { once: true });
 const start = location.hash.slice(1); if (WORKS.some(w => w.id === start)) openWork(start);
 </script>
 </body>
